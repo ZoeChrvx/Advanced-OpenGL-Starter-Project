@@ -70,10 +70,10 @@ int main(int argc, char* argv[])
 
 
 	float vertices[] = {
-		// positions             // colors
-			 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
-			-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,
-			 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f
+		 // positions        // colors
+		 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
+		-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,
+		 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f
 	};
 
 
@@ -85,9 +85,9 @@ int main(int argc, char* argv[])
 	glGenBuffers(1, &vbo);
 
 
-	string vs = LoadShader("simpleVertex.shader");
+	string vs = LoadShader("rgbVertex.shader");
 	const char* vertexShaderSource = vs.c_str();
-	string fs = LoadShader("timeFragment.shader");
+	string fs = LoadShader("rgbFragment.shader");
 	const char* fragmentShaderSource = fs.c_str();
 
 
@@ -140,6 +140,10 @@ int main(int argc, char* argv[])
 	//Enable my vertex attrib array number 0 (we only have one attribute of position)
 	glEnableVertexAttribArray(0);
 
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3*sizeof(float)));
+	//Enable my vertex attrib array number 0 (we only have one attribute of position)
+	glEnableVertexAttribArray(1);
+
 	//Shader to use next
 	glUseProgram(shaderProgram);
 
@@ -148,21 +152,14 @@ int main(int argc, char* argv[])
 
 	//OMG WE FINALLY DRAW ! We use the GL_TRIANGLES primitive type
 	//We draw from vertex 0 and we will be drawing 3 vertices
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
-
 
 
 	bool isRunning = true;
 	while (isRunning) { 
 		// Inputs
-		float timeValue = (float)SDL_GetTicks() / 1000;
-		float redColor = (sin(timeValue) / 2.0f) + 0.5f;
-		float greenColor = (sin(timeValue) + 2.0f) + 0.5f;
-		float blueColor = (sin(timeValue) + 4.0f) + 0.5f;
-		int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+		
 		glUseProgram(shaderProgram);
-		glUniform4f(vertexColorLocation, redColor, 1.0f, 0.0f, 1.0f);
+		/*glUniform4f(vertexColorLocation, redColor, 1.0f, 0.0f, 1.0f);*/
 
 		SDL_Event event;
 		while (SDL_PollEvent(&event)) {

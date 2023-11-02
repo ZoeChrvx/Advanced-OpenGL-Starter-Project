@@ -23,7 +23,7 @@
     <None Include="simpleVertex.shader" />
     <None Include="simpleFragment.shader" />
     <None Include="timeFragment.shader" />
-    <None Include="multiVertex.shader" />
-    <None Include="multiFraglent.shader" />
+    <None Include="rgbVertex.shader" />
+    <None Include="rgbFragment.shader" />
   </ItemGroup>
 </Project>
