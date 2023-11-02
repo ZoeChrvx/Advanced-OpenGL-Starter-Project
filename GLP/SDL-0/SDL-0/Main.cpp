@@ -104,15 +104,21 @@ int main(int argc, char* argv[])
 	unsigned int shaderProgram;
 	shaderProgram = glCreateProgram();
 
-	float xPos = 1.0f;
-
-
 	float vertices[] = {
 		// positions        // colors
 		0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
 	   -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,
 		0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f
 	};
+
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+	//Enable my vertex attrib array number 0 (we only have one attribute of position)
+	glEnableVertexAttribArray(0);
+
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+	//Enable my vertex attrib array number 0 (we only have one attribute of position)
+	glEnableVertexAttribArray(1);
 
 	//now attach shaders to use to the program
 	glAttachShader(shaderProgram, vertexShader);
@@ -136,13 +142,6 @@ int main(int argc, char* argv[])
 	//Finally send the vertices array in the array buffer 
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-	//Enable my vertex attrib array number 0 (we only have one attribute of position)
-	glEnableVertexAttribArray(0);
-
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3*sizeof(float)));
-	//Enable my vertex attrib array number 0 (we only have one attribute of position)
-	glEnableVertexAttribArray(1);
 
 	//Shader to use next
 	glUseProgram(shaderProgram);
@@ -158,8 +157,7 @@ int main(int argc, char* argv[])
 	while (isRunning) { 
 		// Inputs
 		float timeValue = (float)SDL_GetTicks() / 1000;
-		xPos = (sin(timeValue) );
-
+		float xPos = (sin(timeValue) * 2 ) -0.5f;
 		int vertexOffsetLocation = glGetUniformLocation(shaderProgram, "offset");
 		glUseProgram(shaderProgram);
 		glUniform1f(vertexOffsetLocation, xPos);
