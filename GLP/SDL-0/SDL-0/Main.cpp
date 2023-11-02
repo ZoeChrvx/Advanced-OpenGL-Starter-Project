@@ -69,14 +69,6 @@ int main(int argc, char* argv[])
 	glDepthFunc(GL_LESS);
 
 
-	float vertices[] = {
-		 // positions        // colors
-		 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
-		-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,
-		 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f
-	};
-
-
 	//Create an ID to be given at object generation
 	unsigned int vbo;
 
@@ -112,7 +104,15 @@ int main(int argc, char* argv[])
 	unsigned int shaderProgram;
 	shaderProgram = glCreateProgram();
 
+	float xPos = 1.0f;
 
+
+	float vertices[] = {
+		// positions        // colors
+		0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
+	   -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,
+		0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f
+	};
 
 	//now attach shaders to use to the program
 	glAttachShader(shaderProgram, vertexShader);
@@ -157,9 +157,12 @@ int main(int argc, char* argv[])
 	bool isRunning = true;
 	while (isRunning) { 
 		// Inputs
-		
+		float timeValue = (float)SDL_GetTicks() / 1000;
+		xPos = (sin(timeValue) );
+
+		int vertexOffsetLocation = glGetUniformLocation(shaderProgram, "offset");
 		glUseProgram(shaderProgram);
-		/*glUniform4f(vertexColorLocation, redColor, 1.0f, 0.0f, 1.0f);*/
+		glUniform1f(vertexOffsetLocation, xPos);
 
 		SDL_Event event;
 		while (SDL_PollEvent(&event)) {

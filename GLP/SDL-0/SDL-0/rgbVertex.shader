@@ -1,15 +1,13 @@
 #version 330 core
 in vec3 pos;
-in vec3 offset;
 in vec3 color;
-
+uniform float offset;
 out vec4 ourColor;
 
 void main()
 {
-    pos = pos + vec3(0, 0.3f, 0);
-    gl_Position = vec4(-pos, 1.0);
-    ourColor = vec4(color, 1.0f);
+    gl_Position = vec4(pos.x + offset, pos.y, pos.z, 1.0);
+    ourColor = vec4((pos.x + offset)/2 + 0.5, pos.y/2 + 0.5, pos.z/2 + 0.5, 1.0f);
 }
 
 
