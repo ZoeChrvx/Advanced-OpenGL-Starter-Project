@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseScene.h"
+#include "MipmapScene.h"
 #include "ScreensaverScene.h"
 #include "TessellationModesScene.h"
 #include "TerrainTessellationScene.h"
@@ -36,7 +37,7 @@ Scene* SceneSelector(SceneID id) {
 		break;
 	}
 	case MIP_MAP: {
-		break;
+		return new MipmapScene();
 	}
 	default: {
 		return nullptr;
