@@ -7,15 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385739ca-f799-4280-a7ed-1c4e753533cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SDL-0/MipmapScene.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL-0/MipmapScene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/SDL-0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/SDL-0.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Debug/SDL-0.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Debug/SDL-0.exe.recipe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/SceneManagement.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/SceneManagement.h" afterDir="false" />
-    </list>
+    <list default="true" id="385739ca-f799-4280-a7ed-1c4e753533cc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,10 +16,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2eczP19XmVrZ2uzcCpNxMwrkpRq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,13 +36,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\zoe.chervaux\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\zoe.chervaux\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\zoe.chervaux\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Zoz\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Zoz\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Zoz\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -78,6 +71,17 @@
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
       </configuration_2>
+      <configuration_3>
+        <option name="CONFIGURATION" value="" />
+        <option name="PLATFORM" value="" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXE_PATH" value="$(TargetPath)" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$(ProjectDir)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      </configuration_3>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" />
       <method v="2">
         <option name="Build" />
@@ -93,6 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712218627723</updated>
       <workItem from="1712218629219" duration="2582000" />
+      <workItem from="1712319415689" duration="4500000" />
     </task>
     <servers />
   </component>

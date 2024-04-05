@@ -94,7 +94,6 @@
     <ClCompile Include="maths\Vector2.cpp" />
     <ClCompile Include="maths\Vector3.cpp" />
     <ClCompile Include="maths\Vector4.cpp" />
-    <ClCompile Include="MipmapScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
@@ -102,6 +101,7 @@
     <ClCompile Include="TerrainTessellationScene.cpp" />
     <ClCompile Include="TessellationModesScene.cpp" />
     <ClCompile Include="TessellationScene.cpp" />
+    <ClCompile Include="TextureScene.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +125,9 @@
     <None Include="Shaders\tessModesEvaluation.shader" />
     <None Include="Shaders\tessModesFragment.shader" />
     <None Include="Shaders\tessModesVertex.shader" />
+    <None Include="Shaders\textureAnimVertex.shader" />
+    <None Include="Shaders\textureFragment.shader" />
+    <None Include="Shaders\TextureVertex.shader" />
     <None Include="Shaders\vertexMove.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -143,7 +146,6 @@
     <ClInclude Include="maths\Vector2.h" />
     <ClInclude Include="maths\Vector3.h" />
     <ClInclude Include="maths\Vector4.h" />
-    <ClInclude Include="MipmapScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManagement.h" />
     <ClInclude Include="Shader.h" />
@@ -153,6 +155,7 @@
     <ClInclude Include="TerrainTessellationScene.h" />
     <ClInclude Include="TessellationModesScene.h" />
     <ClInclude Include="TessellationScene.h" />
+    <ClInclude Include="TextureScene.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
