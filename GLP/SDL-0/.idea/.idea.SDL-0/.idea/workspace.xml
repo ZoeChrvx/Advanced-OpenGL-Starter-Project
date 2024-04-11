@@ -8,15 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="385739ca-f799-4280-a7ed-1c4e753533cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/TessellationControlRect.tesc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/TessellationEvalRect.tese" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/TessellationVertexRect.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL-0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL-0/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/SDL-0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/SDL-0.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/animatedRainbowVertex.shader" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/animatedRainbowVertex.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/tessellationControl.shader" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/tessellationControl.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/tessellationEval.shader" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/tessellationEval.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/tessellationVertex.shader" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/tessellationVertex.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/tessellationFragment.shader" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/tessellationFragment.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/TessellationModesScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/TessellationModesScene.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL-0/TessellationScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/TessellationScene.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +103,7 @@
       <workItem from="1712319415689" duration="4500000" />
       <workItem from="1712559713174" duration="9096000" />
       <workItem from="1712819446724" duration="1831000" />
-      <workItem from="1712821533799" duration="2820000" />
+      <workItem from="1712821533799" duration="6037000" />
     </task>
     <servers />
   </component>

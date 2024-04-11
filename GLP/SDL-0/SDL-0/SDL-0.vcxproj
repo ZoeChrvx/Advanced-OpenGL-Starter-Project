@@ -158,6 +158,9 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Shaders\TessellationControlRect.tesc" />
+    <Content Include="Shaders\TessellationEvalRect.tese" />
+    <Content Include="Shaders\TessellationVertexRect.vert" />
     <Content Include="Shaders\textureAnimVertex.shader" />
     <Content Include="Shaders\textureFragment.shader" />
     <Content Include="Shaders\textureVertex.shader" />
