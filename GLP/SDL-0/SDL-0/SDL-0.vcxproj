@@ -87,7 +87,6 @@
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\TextureKtx.cpp" />
     <ClCompile Include="Engine\Timer.cpp" />
-    <ClCompile Include="GrassScene.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="maths\Matrix4.cpp" />
     <ClCompile Include="maths\Matrix4Row.cpp" />
@@ -126,9 +125,6 @@
     <None Include="Shaders\tessModesEvaluation.shader" />
     <None Include="Shaders\tessModesFragment.shader" />
     <None Include="Shaders\tessModesVertex.shader" />
-    <None Include="Shaders\textureAnimVertex.shader" />
-    <None Include="Shaders\textureFragment.shader" />
-    <None Include="Shaders\TextureVertex.shader" />
     <None Include="Shaders\vertexMove.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -140,7 +136,6 @@
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\TextureKtx.h" />
     <ClInclude Include="Engine\Timer.h" />
-    <ClInclude Include="GrassScene.h" />
     <ClInclude Include="maths\Maths.h" />
     <ClInclude Include="maths\Matrix4.h" />
     <ClInclude Include="maths\Matrix4Row.h" />
@@ -161,7 +156,9 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Shaders\Blades.shader" />
+    <Content Include="Shaders\textureAnimVertex.shader" />
+    <Content Include="Shaders\textureFragment.shader" />
+    <Content Include="Shaders\textureVertex.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
