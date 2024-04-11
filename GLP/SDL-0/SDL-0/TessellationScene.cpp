@@ -53,8 +53,11 @@ void TessellationScene::SetupScene()
 
 void TessellationScene::UpdateScene()
 {
+	float timeValue = (float)SDL_GetTicks() / 1000;
+	float sinusoidValue = (sin(timeValue));
 	m_shaderProgram.Use();
-
+	m_shaderProgram.setFloat("ratio02", 5*(sinusoidValue + 2));
+	m_shaderProgram.setFloat("ratio01", 2*(sinusoidValue + 1));
 	glPointSize(5.0f);
 	glDrawArrays(GL_PATCHES, 0, 3);
 
