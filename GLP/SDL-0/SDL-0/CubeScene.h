@@ -6,8 +6,8 @@ class CubeScene : public Scene
 {
 private:
     Texture2D texture;
-    Shader m_vertexShader, m_fragmentShader;
-    ShaderProgram m_Program;
+    Shader m_vertexShader, m_fragmentShader, m_tessControlShader, m_tessEvalShader, m_tessCubeFrag;
+    ShaderProgram m_Program, m_TessProgram;
     Matrix4 projection, mv, rotation;
     Vector3 position;
     bool wireframe;
