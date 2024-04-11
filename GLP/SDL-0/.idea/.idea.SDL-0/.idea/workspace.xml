@@ -8,20 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="385739ca-f799-4280-a7ed-1c4e753533cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/TessCubeFrag.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/PlanetScene.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/PlanetScene.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/Planet/planet.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/Planet/planet.geom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/Planet/planet.tesc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/Planet/planet.tese" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/Planet/planet.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL-0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL-0/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/SDL-0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/SDL-0.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/CubeScene.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/CubeScene.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/TessellationControlRect.tesc" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/TessellationControlRect.tesc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/TessellationEvalRect.tese" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/TessellationEvalRect.tese" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/cube.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/cube.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/TessellationScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/TessellationScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDL-0/Window.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Window.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2eczP19XmVrZ2uzcCpNxMwrkpRq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -109,7 +109,7 @@
       <workItem from="1712319415689" duration="4500000" />
       <workItem from="1712559713174" duration="9096000" />
       <workItem from="1712819446724" duration="1831000" />
-      <workItem from="1712821533799" duration="15150000" />
+      <workItem from="1712821533799" duration="17024000" />
     </task>
     <servers />
   </component>
