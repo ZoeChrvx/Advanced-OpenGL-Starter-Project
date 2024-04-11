@@ -87,6 +87,7 @@
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\TextureKtx.cpp" />
     <ClCompile Include="Engine\Timer.cpp" />
+    <ClCompile Include="GrassScene.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="maths\Matrix4.cpp" />
     <ClCompile Include="maths\Matrix4Row.cpp" />
@@ -139,6 +140,7 @@
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\TextureKtx.h" />
     <ClInclude Include="Engine\Timer.h" />
+    <ClInclude Include="GrassScene.h" />
     <ClInclude Include="maths\Maths.h" />
     <ClInclude Include="maths\Matrix4.h" />
     <ClInclude Include="maths\Matrix4Row.h" />
@@ -157,6 +159,9 @@
     <ClInclude Include="TessellationScene.h" />
     <ClInclude Include="TextureScene.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shaders\Blades.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

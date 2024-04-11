@@ -7,7 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385739ca-f799-4280-a7ed-1c4e753533cc" name="Changes" comment="" />
+    <list default="true" id="385739ca-f799-4280-a7ed-1c4e753533cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SDL-0/GrassScene.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/GrassScene.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SDL-0/Shaders/Blades.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SDL-0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SDL-0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/SDL-0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/SDL-0.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/Debug/SDL-0.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Debug/SDL-0.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/SceneManagement.h" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/SceneManagement.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/Shaders/textureAnimVertex.shader" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/Shaders/textureAnimVertex.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/TerrainTessellationScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/TerrainTessellationScene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDL-0/TextureScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SDL-0/TextureScene.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,28 +39,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C++ Project.SDL-0.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Mipmap",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C++ Project.SDL-0.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Mipmap&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Zoz\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Zoz\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Zoz\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\zoe.chervaux\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\zoe.chervaux\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\zoe.chervaux\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SDL-0" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -71,17 +85,6 @@
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
       </configuration_2>
-      <configuration_3>
-        <option name="CONFIGURATION" value="" />
-        <option name="PLATFORM" value="" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXE_PATH" value="$(TargetPath)" />
-        <option name="PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$(ProjectDir)" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      </configuration_3>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/SDL-0/SDL-0.vcxproj" />
       <method v="2">
         <option name="Build" />
@@ -98,6 +101,8 @@
       <updated>1712218627723</updated>
       <workItem from="1712218629219" duration="2582000" />
       <workItem from="1712319415689" duration="4500000" />
+      <workItem from="1712559713174" duration="9096000" />
+      <workItem from="1712819446724" duration="1831000" />
     </task>
     <servers />
   </component>

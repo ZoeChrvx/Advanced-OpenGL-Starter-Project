@@ -93,12 +93,6 @@ void TextureScene::SetupScene()
 	m_GrassTexture.generate();
 	m_GrassTexture.use();
 	glGenerateTextureMipmap(m_GrassTexture.id);
-
-	m_GroundTexture = Texture2D();
-	m_GroundTexture.load("Textures/ground_01.png");
-	m_GroundTexture.generate();
-	m_GroundTexture.use();
-	glGenerateTextureMipmap(m_GroundTexture.id);
 }
 
 void ActivateMipMap(bool mipmap = true)
@@ -132,15 +126,12 @@ void TextureScene::UpdateScene()
 
 	m_animShaderProgram.Use();
 	m_GrassTexture.use();
-	glDrawArrays(GL_TRIANGLE_STRIP, 0,4);
-	glDrawArrays(GL_TRIANGLE_STRIP, 4,4);
 	float timeValue = (float)SDL_GetTicks() / 1000;
 	float sinusoidValue = (sin(timeValue)/2.0 ) +0.5f;
-
 	m_animShaderProgram.setFloat("scale", sinusoidValue);
 	ActivateMipMap(mipmap);
 
-	glDrawArrays(GL_TRIANGLE_STRIP, 120,4);
+	glDrawArrays(GL_TRIANGLE_STRIP, 20,4);
 }
 
 void TextureScene::HandleInputs(SDL_Event& e)
