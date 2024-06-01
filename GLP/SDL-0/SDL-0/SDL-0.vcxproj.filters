@@ -46,9 +46,6 @@
     <Filter Include="Fichiers de ressources\Utils\Gaetz Engine">
       <UniqueIdentifier>{213bd315-59dd-4e3e-a594-16aa5038b0b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers de ressources\Shaders\MipMap">
-      <UniqueIdentifier>{157aaded-5938-4d61-a66a-e6349a0d61ce}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -114,7 +111,10 @@
     <ClCompile Include="Engine\Timer.cpp">
       <Filter>Fichiers de ressources\Utils\Gaetz Engine</Filter>
     </ClCompile>
-    <ClCompile Include="MipmapScene.cpp">
+    <ClCompile Include="CubeScene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereScene.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="TextureScene.cpp">
@@ -185,14 +185,14 @@
     <None Include="Shaders\terrainTessEvaluation.shader">
       <Filter>Fichiers de ressources\Shaders\Terrain Tessellation</Filter>
     </None>
-    <None Include="textureAnimVertex.shader">
-      <Filter>Fichiers de ressources\Shaders\MipMap</Filter>
+    <None Include="Shaders\sphere.frag">
+      <Filter>Fichiers de ressources\Shaders</Filter>
     </None>
-    <None Include="TextureVertex.shader">
-      <Filter>Fichiers de ressources\Shaders\MipMap</Filter>
+    <None Include="Shaders\sphere.vert">
+      <Filter>Fichiers de ressources\Shaders</Filter>
     </None>
-    <None Include="textureFragment.shader">
-      <Filter>Fichiers de ressources\Shaders\MipMap</Filter>
+    <None Include="Shaders\sphereGeo.shader">
+      <Filter>Fichiers de ressources\Shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -271,7 +271,16 @@
     <ClInclude Include="Engine\Timer.h">
       <Filter>Fichiers de ressources\Utils\Gaetz Engine</Filter>
     </ClInclude>
-    <ClInclude Include="MipmapScene.h">
+    <ClInclude Include="CubeScene.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Object3D.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape3D.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereScene.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="TextureScene.h">

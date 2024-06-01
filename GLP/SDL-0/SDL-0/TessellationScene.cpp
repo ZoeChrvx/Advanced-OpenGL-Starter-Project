@@ -10,13 +10,12 @@ TessellationScene::TessellationScene() {
 
 //Load the correct shaders from your files
 void TessellationScene::LoadShaders() {
-	m_vertexShader.LoadFrom("TessellationVertexRect.vert", VERTEX);
+	m_vertexShader.LoadFrom("tessellationVertex.shader", VERTEX);
 	m_fragmentShader.LoadFrom("tessellationFragment.shader", FRAGMENT);
-	m_tessControlShader.LoadFrom("TessellationControlRect.tesc", TESSELLATION_CONTROL);
-	m_tessEvalShader.LoadFrom("TessellationEvalRect.tese", TESSELLATION_EVALUATION);
+	m_tessControlShader.LoadFrom("tessellationControl.shader", TESSELLATION_CONTROL);
+	m_tessEvalShader.LoadFrom("tessellationEval.shader", TESSELLATION_EVALUATION);
 	if(ENABLE_GEOMETRY_SHADER)m_geometryShader.LoadFrom("tessellationGeometry.shader", GEOMETRY);
 
-	glPatchParameteri(GL_PATCH_VERTICES, 4);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
@@ -54,13 +53,9 @@ void TessellationScene::SetupScene()
 
 void TessellationScene::UpdateScene()
 {
-	float timeValue = (float)SDL_GetTicks() / 1000;
-	float sinusoidValue = (sin(timeValue));
 	m_shaderProgram.Use();
-	m_shaderProgram.setFloat("ratioInner", 5*(sinusoidValue + 2));
-	m_shaderProgram.setFloat("RatioOuter", 2*(sinusoidValue + 1));
+
 	glPointSize(5.0f);
-	glDrawArrays(GL_PATCHES, 0, 4);
-	
+	glDrawArrays(GL_PATCHES, 0, 3);
 
 }

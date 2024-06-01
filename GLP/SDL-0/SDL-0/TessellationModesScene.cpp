@@ -8,10 +8,10 @@ TessellationModesScene::TessellationModesScene()
 
 //Load the correct shaders from your files
 void TessellationModesScene::LoadShaders() {
-	m_vertexShader.LoadFrom("TessellationVertexRect.vert", VERTEX);
-	m_fragmentShader.LoadFrom("tessellationFragment.shader", FRAGMENT);
-	m_tessControlShader.LoadFrom("TessellationControlRect.tesc", TESSELLATION_CONTROL);
-	m_tessEvalShader.LoadFrom("TessellationEvalRect.tese", TESSELLATION_EVALUATION);
+	m_vertexShader.LoadFrom("tessModesVertex.shader", VERTEX);
+	m_fragmentShader.LoadFrom("tessModesFragment.shader", FRAGMENT);
+	m_tessControlShader.LoadFrom("tessModesControl.shader", TESSELLATION_CONTROL);
+	m_tessEvalShader.LoadFrom("tessModesEvaluation.shader", TESSELLATION_EVALUATION);
 
 	glPatchParameteri(GL_PATCH_VERTICES, 4);
 }
@@ -51,6 +51,6 @@ void TessellationModesScene::UpdateScene()
 	glPointSize(5.0f);
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	glPatchParameteri(GL_PATCHES, 4);
+	glDrawArrays(GL_PATCHES, 0, 4);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 }

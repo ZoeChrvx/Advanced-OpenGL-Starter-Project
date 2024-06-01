@@ -1,6 +1,6 @@
 #version 450 core
 
-layout (triangles, fractional_even_spacing, cw) in;
+layout (triangles, equal_spacing, cw) in;
 
 void main(void)
 {

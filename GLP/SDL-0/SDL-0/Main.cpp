@@ -14,10 +14,10 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	//Creating a new window w/ dimensions and background color (optional) 
-	Window window(1280.0f, 900.0f, Color(0.2f, 0.2f, 0.2f, 1.0f));
+	Window window(540.0f, 540.0f, Color(0,0,0.25f));
 
 	//Use a SceneID (see SceneManagement.h) to quickly setup the correct scene for the build!
-	Scene* scene = SceneSelector(CUBES);
+	Scene* scene = SceneSelector(SPHERE);
 	if (scene == nullptr) return 1; //Scene doesn't exist yet
 
 	//Preparing shaders, shader programs, vao and vbo

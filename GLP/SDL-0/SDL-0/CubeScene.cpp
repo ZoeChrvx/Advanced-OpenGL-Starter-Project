@@ -6,41 +6,23 @@
 
 CubeScene::CubeScene()
 {
-	
 }
 
 
 void CubeScene::LoadShaders() {
 	m_vertexShader.LoadFrom("cube.vert", VERTEX);
 	m_fragmentShader.LoadFrom("cube.frag", FRAGMENT);
-	m_tessControlShader.LoadFrom("TessellationControlRect.tesc", TESSELLATION_CONTROL);
-	m_tessEvalShader.LoadFrom("TessellationEvalRect.tese", TESSELLATION_EVALUATION);
-	m_tessCubeFrag.LoadFrom("TessCubeFrag.frag", FRAGMENT);
-	
-	glPatchParameteri(GL_PATCH_VERTICES,3);
+	m_tessVertexShader.LoadFrom("cubeTess.vert", VERTEX);
+	m_tessFragShader.LoadFrom("cubeTess.frag", FRAGMENT);
+	m_tessControlShader.LoadFrom("cube.tesc", TESSELLATION_CONTROL);
+	m_tessEvalShader.LoadFrom("cube.tese", TESSELLATION_EVALUATION);
+
 }
 
 void CubeScene::CreateShaderPrograms()
 {
-	m_Program.Compose
-	(
-		std::vector<Shader*>
-		{
-			&m_vertexShader,
-			&m_fragmentShader
-		}
-	);
-	
-	m_TessProgram.Compose
-	(
-		std::vector<Shader*>
-		{
-			&m_vertexShader,
-			&m_tessControlShader,
-			&m_tessEvalShader,
-			&m_tessCubeFrag
-		}
-	);
+	m_Program.Compose({&m_vertexShader, &m_fragmentShader});
+	m_tessProgram.Compose({&m_tessVertexShader, &m_tessFragShader, &m_tessControlShader, &m_tessEvalShader});
 }
 
 void CubeScene::VerticeInformationSlicer()
@@ -52,6 +34,7 @@ void CubeScene::VerticeInformationSlicer()
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
+	//glPatchParameteri(GL_PATCHES, 3);
 	delete [] verticeArray;
 }
 
@@ -124,7 +107,7 @@ void CubeScene::SetupScene()
 	glDepthFunc(GL_LEQUAL);
 
 	//Creating and loading the simple texture
-	Texture2D m_WallTexture = Texture2D();
+	m_WallTexture = Texture2D();
 	m_WallTexture.load("Textures/wall.png");
 	m_WallTexture.generate();
 	m_WallTexture.use();
@@ -137,6 +120,7 @@ void CubeScene::SetupScene()
 
 void CubeScene::UpdateScene() {
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
 	
 	float timeValue = (float)SDL_GetTicks() / 1000;
 	float sinusoidValue = (sin(timeValue))/2.0f;
@@ -145,34 +129,28 @@ void CubeScene::UpdateScene() {
 	m_Program.Use();
 	mv = Matrix4::createTranslation(position -Vector3(0.5f,0,0));
 	Matrix4 rotationX = Matrix4::createRotationX(0.01f );
-	Matrix4 rotationY = Matrix4::createRotationY(0.01f );
+	Matrix4 rotationY = Matrix4::createRotationY(0.005f );
 	Matrix4 rotationZ = Matrix4::createRotationY(0.01f );
 	rotation *= rotationX;
 	rotation *= rotationY;
 	rotation *= rotationZ;
 	mv = mv * rotation;
 	
-	
+
 	m_Program.setMatrix4("mv_matrix", mv);
 	m_Program.setMatrix4("projection", projection);
-
-	//WallCube
 	glDrawArrays(GL_TRIANGLES, 0, 36);
-	
-	//Wire Mesh cube
+
+	m_tessProgram.Use();
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
 	mv = Matrix4::createTranslation(position + Vector3(0.5f,0,0));
 	mv = mv * rotation;
 	//m_Program.setMatrix4("mv_matrix", mv);
 
-	m_TessProgram.Use();
-	m_TessProgram.setMatrix4("mv_matrix", mv);
-	m_TessProgram.setMatrix4("projection", projection);
-	m_TessProgram.setFloat("ratioInner", (sinusoidValue+2)*2);
-	m_TessProgram.setFloat("ratioOuter", (sinusoidValue+2)*2);
-	
-	glPointSize(5.0f);
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
+	m_tessProgram.setMatrix4("mv_matrix", mv);
+	m_tessProgram.setMatrix4("projection", projection);
+	m_tessProgram.setFloat("ratio", (sinusoidValue + 1) * 10);
 	glDrawArrays(GL_PATCHES, 0, 36);
 }
 
